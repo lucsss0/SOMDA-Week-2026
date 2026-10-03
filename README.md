@@ -22,7 +22,22 @@ npx serve .
 - New: Schedule / Activities (`#schedule`) lists only confirmed activities across Sep 21–24 with no invented day assignments.
 - Photo section is now labeled Event Moments. Nav: About / Highlights / Gallery / Schedule / Video. Mobile menu included.
 
-## Replace photos (required before publishing)
+## Photos — WIRED (Oct 3, 2026)
+
+Real photos supplied and wired. Canonical files now present and serving HTTP 200:
+
+| File | Source photo | Section |
+|---|---|---|
+| `assets/img/hero.jpg` | large red-carpet crowd group photo | 01 Hero |
+| `assets/img/highlight-quiz.jpg` | Mapuhuh quiz show stage | Highlight 01 + gallery |
+| `assets/img/highlight-awarding.jpg` | certificate-recognition group photo | Highlight 02 + gallery + video poster |
+| `assets/img/highlight-vector.jpg` | stylus-on-tablet vector work | Highlight 03 + gallery |
+| `assets/img/design-talks.jpg` | speaker with WORK IN PROGRESS slide | 05 Design Talks + gallery |
+| `assets/img/video-poster.jpg` | certificate group photo | 06 Video preview |
+
+Original uploads (`FB_IMG_*`, `received_*`) kept as backup. Alt texts updated to describe actual photo content.
+
+## Replace photos (if new ones arrive)
 
 Drop real files here — names are already wired in `index.html`:
 
