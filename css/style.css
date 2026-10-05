@@ -229,7 +229,6 @@ body.loaded .hero-bg .hero-img{transform:scale(1)}
 .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 
-.t-stop{color:var(--orange)}
 .sec-desc code{font-family:inherit;background:rgba(246,241,232,.08);padding:.1em .4em;border-radius:6px;font-size:.9em}
 
 /* GALLERY */
