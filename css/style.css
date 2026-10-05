@@ -95,7 +95,6 @@ a{color:inherit}
 .t-row{display:block}
 .t-outline{color:transparent;-webkit-text-stroke:1.5px var(--ink)}
 .t-year{color:var(--orange)}
-.t-heart{font-size:.35em;vertical-align:super;margin-left:.3em;filter:saturate(1.2)}
 .hero-sub{font-size:clamp(1.05rem,2.2vw,1.4rem);max-width:34ch;color:var(--ink)}
 .hero-meta{margin-top:1.2rem;color:var(--muted)}
 .hero-dates{display:flex;align-items:center;gap:.6rem;letter-spacing:.06em}
