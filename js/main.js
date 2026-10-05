@@ -3,6 +3,29 @@
   const body = document.body;
   requestAnimationFrame(()=>requestAnimationFrame(()=>body.classList.add('loaded')));
 
+  // Color theme: system / dark / light (persisted, follows OS in system mode)
+  const THEME_KEY = 'somda-theme';
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  let themeMode = 'system';
+  try{ themeMode = localStorage.getItem(THEME_KEY) || 'system'; }catch(e){}
+  if(!['system','dark','light'].includes(themeMode)) themeMode = 'system';
+  function applyTheme(mode){
+    themeMode = mode;
+    const eff = mode === 'system' ? (mq.matches ? 'dark' : 'light') : mode;
+    document.documentElement.dataset.theme = eff;
+    try{ localStorage.setItem(THEME_KEY, mode); }catch(e){}
+    document.querySelectorAll('[data-set-theme]').forEach(b=>{
+      b.setAttribute('aria-pressed', String(b.dataset.setTheme === mode));
+    });
+  }
+  document.querySelectorAll('[data-set-theme]').forEach(b=>{
+    b.addEventListener('click', ()=>applyTheme(b.dataset.setTheme));
+  });
+  if(typeof mq.addEventListener === 'function'){
+    mq.addEventListener('change', ()=>{ if(themeMode === 'system') applyTheme('system'); });
+  }
+  applyTheme(themeMode);
+
   // Smooth anchor offset (CSS handles most; this keeps fixed header clearance for older browsers)
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',e=>{
